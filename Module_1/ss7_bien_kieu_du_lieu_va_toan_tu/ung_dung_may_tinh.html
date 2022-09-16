@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<form method="post">
+    <input type="text" id="number1">
+    <input type="text" id="number2"><br><br>
+    <button type="button" id="cong" onclick="phepCong()">Addition(+)</button>
+    <button type="button" id="tru" onclick="phepTru()">Subtraction(-)</button>
+    <button type="button" id="nhan" onclick="phepNhan()">Multiplication(x)</button>
+    <button type="button" id="chia" onclick="phepChia()">Division(/)</button>
+    <p id="result">Result: </p>
+</form>
+<script>
+    function phepCong() {
+        let num1 = +document.getElementById("number1").value;
+        let num2 = +document.getElementById("number2").value;
+        let cong = num1 + num2;
+        document.getElementById("result").innerHTML = "Result Addtion: " + cong;
+    }
+
+    function phepTru() {
+        let num1 = +document.getElementById("number1").value;
+        let num2 = +document.getElementById("number2").value;
+        let tru = num1 - num2;
+        document.getElementById("result").innerHTML = "Result Subtraction: " + tru;
+    }
+
+    function phepNhan() {
+        let num1 = +document.getElementById("number1").value;
+        let num2 = +document.getElementById("number2").value;
+        let nhan = num1 * num2;
+        document.getElementById("result").innerHTML = "Result Multiplication: " + nhan;
+    }
+
+    function phepChia() {
+        let num1 = +document.getElementById("number1").value;
+        let num2 = +document.getElementById("number2").value;
+        let chia = num1 / num2;
+        document.getElementById("result").innerHTML = "Result Division: " + chia;
+    }
+</script>
+</body>
+</html>
