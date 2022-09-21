@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Mời nhập A của phương trình Ax^2 + Bx + C =0");
+    let b = +prompt("Mời nhập B của phương trình Ax^2 + Bx + C =0");
+    let c = +prompt("Mời nhập C của phương trình Ax^2 + Bx + C =0");
+    if (a == 0) {
+        if (b != 0) {
+            alert("Phương trình có nghiệm duy nhất: " + -c / b);
+        } else {
+            if (c != 0) {
+                alert("Phương trình vô nghiệm");
+            } else {
+                alert("Phương trình có vô số nghiệm");
+            }
+        }
+    } else {
+        let delta = b * b - 4 * a * c;
+        if (delta < 0) {
+            alert("Phương trình vô nghiệm");
+        } else if (delta == 0) {
+            alert("Phương trình có nghiệm kép x1 = x2 = " + (-b / (2 * a)));
+        } else {
+            let canBacHai = Math.sqrt(delta);
+            let x1 = (-b + canBacHai) / 2 * a;
+            let x2 = (-b - canBacHai) / 2 * a;
+            alert("Phương trình có 2 nghiệm x1 = " + x1 + " và x2 = " + x2);
+        }
+    }
+</script>
+</body>
+</html>

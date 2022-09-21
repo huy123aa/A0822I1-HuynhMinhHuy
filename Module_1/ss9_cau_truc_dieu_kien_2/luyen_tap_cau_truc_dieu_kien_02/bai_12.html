@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 12</title>
+</head>
+<body>
+<script>
+    let laiNganHang = 0;
+    let soTien = +prompt("Mời nhập số tiền ban đầu");
+    let soThang = +prompt("Mời nhập số tháng cho vay");
+    let laiXuat = +prompt("Mời nhập lãi xuất hàng tháng");
+    if (soThang < 5){
+        laiNganHang = soTien*laiXuat*0.10;
+    }else if(soThang<10){
+        laiNganHang = soTien*laiXuat*0.15;
+    }else if(soThang<20){
+        laiNganHang = soTien*laiXuat*0.20;
+    }else{
+        laiNganHang = soTien*laiXuat*0.30;
+    }
+    alert("Tiền lãi ngân hàng là: "+laiNganHang);
+</script>
+</body>
+</html>

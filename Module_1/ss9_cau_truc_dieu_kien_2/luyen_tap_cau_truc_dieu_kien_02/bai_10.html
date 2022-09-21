@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 10</title>
+</head>
+<body>
+<script>
+    let giaTien =0;
+    let chuDien = +prompt("Mời nhập chữ điện");
+    if (chuDien < 10){
+        giaTien = chuDien *10;
+    }else if(chuDien<20){
+        giaTien = chuDien*15;
+    }else if(chuDien<30){
+        giaTien = chuDien*20;
+    }else{
+        giaTien = chuDien*30;
+    }
+    alert("Tiền điện là: "+giaTien);
+</script>
+</body>
+</html>

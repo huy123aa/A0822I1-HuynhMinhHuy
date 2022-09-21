@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11</title>
+</head>
+<body>
+<script>
+    let thue =0;
+    let thuNhap = +prompt("Mời nhập thu nhập cá nhân");
+    if (thuNhap < 10){
+        thue = thuNhap *0.10;
+    }else if(thuNhap<20){
+        thue = thuNhap*0.15;
+    }else if(thuNhap<30){
+        thue = thuNhap*0.20;
+    }else{
+        thue = thuNhap*0.30;
+    }
+    alert("Tiền thuế là: "+thue);
+</script>
+</body>
+</html>
