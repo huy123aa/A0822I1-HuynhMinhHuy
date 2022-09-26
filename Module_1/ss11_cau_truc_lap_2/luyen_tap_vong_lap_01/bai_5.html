@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    function dayFibonacci(x) {
+        if (x == 1 || x == 2) {
+            return 1;
+        } else return dayFibonacci(x - 1) + dayFibonacci(x - 2);
+    }
+
+    let sum = 0;
+    for (let i = 1; i < 21; i++) {
+        sum += dayFibonacci(i);
+    }
+    document.write("Tổng là: " + sum);
+
+</script>
+</body>
+</html>

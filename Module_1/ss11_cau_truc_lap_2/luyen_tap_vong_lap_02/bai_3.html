@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    for (let i = 1; i <= 5; i++) {        //tạo 5 hàng
+        for (let j = 1; j <= i; j++) {    //hàng thứ nhất j=i=1 nên in 1 dấu *
+            document.write("*");    //hàng thứ hai j=1, i=2 nên in 2 dấu *
+        }
+        for (let k = 1; k <= 5 - i; k++) {  //hàng thứ nhất k=i=1, in 4 dấu cách
+            document.write("&ensp;");// in ra 2 khoảng trống (ở đây 1 kí tự = 2 khoảng trống)
+        }
+        document.write("<br>");
+    }
+    document.write("<br><br>");
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 0; j <= 5 - i; j++) {
+            document.write("*");
+        }
+        for (let k = 1; k < i; k++) {
+            document.write("&ensp;");
+        }
+        document.write("<br>");
+    }
+    document.write("<br><br>");
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5 - i; j++) {
+            document.write("&ensp;");
+        }
+        for (let k = 0; k < i; k++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br><br>");
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j < i; j++) {
+            document.write("&ensp;");
+        }
+        for (let k = 0; k <= 5 - i; k++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+
+
+</script>
+</body>
+</html>

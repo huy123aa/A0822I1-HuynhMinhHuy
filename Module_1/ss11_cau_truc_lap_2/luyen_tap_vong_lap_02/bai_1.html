@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    function dayFibonacci(x) {
+        if (x == 1 || x == 2) {
+            return 1;
+        } else return dayFibonacci(x - 1) + dayFibonacci(x - 2);
+    }
+    let a = +prompt("Bạn muốn hiển thị bao nhiêu số trong dãy Fibonaci?")
+    for (let i = 1; i <= a; i++) {
+        document.write(dayFibonacci(i) +"<br>");
+    }
+</script>
+</body>
+</html>

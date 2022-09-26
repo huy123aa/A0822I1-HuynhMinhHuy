@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<script>
+    alert("Hãy nhập khoảng số bạn muốn!");
+    let max = +prompt("Nhập giới hạn trên: ");
+    let min = +prompt("Nhập giới hạn dưới: ");
+    let randomNum = Math.floor(Math.random() * (max - min) + min);
+    // mathrandom là chạy từ 0 tới 1, ví dụ từ 10 đến 100 thì ở trên sẽ chạy đúng
+    // neu dung math.random * max là sai vì nó sẽ chạy từ 0 đến 100 và bị dư khúc từ 0 đến 10
+    let guessNum = +(prompt("Nhập số: "));
+    console.log(randomNum);
+
+    while (true) {
+        if (guessNum < randomNum) {
+            guessNum = +prompt("Hãy đoán số lớn hơn số bạn vừa đoán!" + randomNum);
+        } else if (guessNum > randomNum) {
+            guessNum = +prompt("Hãy đoán số lớn hơn số bạn vừa đoán!" + randomNum);
+        } else {
+            alert("Bạn đã đoán trúng!");
+            break;
+        }
+    }
+
+</script>
+</body>
+</html>

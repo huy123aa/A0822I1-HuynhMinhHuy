@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    function dayFibonacci(x) {
+        if (x == 1 || x == 2){
+            return 1;
+        }else return dayFibonacci(x-1) + dayFibonacci(x-2);
+    }
+    let i=1;
+    while(true){
+        if(dayFibonacci(i) % 5 == 0){
+        document.write("Số đầu tiền là: "+ dayFibonacci(i));
+            break;
+        }
+        i++;
+    }
+</script>
+</body>
+</html>
