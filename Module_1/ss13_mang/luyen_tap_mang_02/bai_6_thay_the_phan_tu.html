@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    let numOfIndex = +prompt("Nhập số phần từ bạn muốn có trong mảng: ");
+    let arr = [];
+    for (let i = 0; i < numOfIndex; i++) {
+        let j = i + 1;
+        arr[i] = prompt("Nhập phần tử thứ " + j);
+    }
+    document.write("Mảng vừa nhập là: " + arr);
+    for(let i=0; i< arr.length; i++){
+        if(arr[i] == "-"){
+            arr[i] = "_";
+        }
+    }
+    document.write("<br>"+"Mảng sau khi thay thế là: " + arr);
+
+</script>
+</body>
+</html>

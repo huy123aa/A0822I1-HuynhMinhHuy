@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<script>
+    let arr1 =[];
+    let arr2=[];
+    for(let i=0; i<10; i++){
+        let j= i+1;
+        arr1[i] = +prompt("Mời nhập phần tử "+ j+" của mảng a: ");
+    }
+    for(let i=0; i<10; i++){
+        let j= i+1;
+        arr2[i] = +prompt("Mời nhập phần tử "+ j+" của mảng b: ");
+    }
+    console.log("Mảng  a vừa nhập là: "+arr1);
+    console.log("Mảng  b vừa nhập là: "+arr2);
+    let arr3 = arr1.concat(arr2);
+    console.log("Mảng  c là: "+arr3);
+
+
+</script>
+</body>
+</html>

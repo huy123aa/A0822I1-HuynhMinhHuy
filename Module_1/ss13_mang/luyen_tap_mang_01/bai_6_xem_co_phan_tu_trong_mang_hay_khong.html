@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra xem có phần tử x có trong mảng không</title>
+</head>
+<body>
+<script>
+    let arr =[];
+    let check =0;
+    for(let i=0; i<10; i++){
+        let j= i+1;
+        arr[i] = +prompt("Mời nhập phần tử "+ j);
+    }
+    console.log("Mảng vừa nhập là: "+arr);
+    let num = +prompt("Mời nhập 1 số V:  ");
+    for(let k=0; k<10; k++){
+        if(num == arr[k]){
+            check =1;
+        }
+    }
+    if(check ==1){
+        console.log("V is in the array");
+    }else {
+        console.log("V is not in the array");
+    }
+</script>
+</body>
+</html>

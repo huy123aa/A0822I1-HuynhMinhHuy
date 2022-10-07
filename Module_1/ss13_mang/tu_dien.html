@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tudien</title>
+</head>
+<body>
+<input type="text" placeholder="Nhập từ tiếng anh" id="engLish" onkeyup="engLish()"><br>
+<p id="result">Dịch sang tiếng việt là: </p>
+<script>
+    let englishWord = ["Hello", "Goodmorning", "Goodbye"];
+    let vietnameseWord = ["Xin chào !!!", "Chào buổi sáng !!!", "Chào Tạm Biệt!!!"];
+    function engLish() {
+        let index=-1;
+        let myWord = document.getElementById("engLish").value;
+        for (let i = 0; i < englishWord.length; i++) {
+            if (myWord == englishWord[i]) {
+                index=i;
+                document.getElementById("result").innerText = vietnameseWord[index];
+            }
+        }
+        if (index == -1){
+            document.getElementById("result").innerHTML = " Không tìm ra";
+        }
+    }
+</script>
+</body>
+</html>

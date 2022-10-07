@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    let numberOfIndex = +prompt("Nhập số lượng phần tử trong mảng bạn muốn: ");
+    let arr = [];
+    for (let i = 0; i < numberOfIndex; i++) {
+        let j = i + 1;
+        arr[i] = +prompt("Mời nhập phần tử thứ " + j);
+    }
+    document.write("Mảng vửa nhập là: " + arr);
+    for (let i = 0; i < arr.length / 2; i++) {
+        let temp = arr[i];
+        arr[i] = arr[numberOfIndex - 1 - i];
+        arr[numberOfIndex - 1 - i] = temp;
+    }
+    document.write("<br>" + "Mảng sau khi sắp xếp là: " + arr);
+
+</script>
+</body>
+</html>

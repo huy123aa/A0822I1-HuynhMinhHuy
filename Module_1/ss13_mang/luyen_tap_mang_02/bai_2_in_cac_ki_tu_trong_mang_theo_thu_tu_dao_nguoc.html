@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let numOfIndex = +prompt("Nhập số phần từ bạn muốn có trong mảng: ");
+    let arr=[];
+    for(let i=0; i<numOfIndex; i++){
+        let j=i+1;
+        arr[i] = prompt("Nhập phần tử thứ "+j);
+    }
+    document.write("Mảng vừa nhập là: "+arr);
+    for(let i=0; i<arr.length/2; i++){
+        let temp = arr[i];
+        arr[i] = arr[arr.length - i -1];
+        arr[arr.length - i -1] = temp;
+    }
+    document.write("<br>"+"Mảng sau khi đảo ngược: "+arr);
+</script>
+</body>
+</html>

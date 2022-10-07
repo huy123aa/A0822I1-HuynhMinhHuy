@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    let string = prompt("Mời nhập chuỗi: ");
+    document.write("Chuyển chuỗi sang mảng: " + string.split(""));
+    let arr = string.split("");
+    // document.write(arr.length);
+    let count = 0;
+    let check = 1;
+    // let number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    let number = ['0', '1', '2', '3', '4', '5', '6', '7', '8','9'];
+    for (let i = 0; i < arr.length; i++) {
+        check =1;
+        for (let j = 0; j < number.length; j++) {
+            if (arr[i] == number[j]) {
+                check = 0;
+            }
+
+        }
+        if (check == 1) {
+            count++;
+            document.write("<br>"+arr[i]);
+
+        }
+    }
+    document.write("<br>" + "Số từ có trong 1 chuỗi là: " + count);
+
+
+</script>
+</body>
+</html>

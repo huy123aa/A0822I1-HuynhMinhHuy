@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let numOfElement = +prompt("Bạn muốn có bao nhiêu phần tử trong mảng?");
+    let max =0;
+    let arr = [];
+    let sum = 0;
+    for (let i = 0; i < numOfElement; i++) {
+        arr.push(Math.floor(Math.random() * 100));
+    }
+    document.write("Mảng ban đầu là: "+arr);
+    for(let i=0; i<numOfElement; i++){
+        if(arr[i] > max){
+            max = arr[i];
+        }
+        sum += arr[i];
+    }
+    sum /=2;
+    document.write("<br>"+"Phần tử lớn nhất là: "+ max);
+    document.write("<br>"+"Giá trị trung bình của mảng là: "+ sum);
+
+</script>
+</body>
+</html>

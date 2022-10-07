@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số nguyên âm trong chuỗi</title>
+</head>
+<body>
+<script>
+    let str = prompt("Mời nhập chuỗi: ");
+    let vowelWord = ["u", "e", "o", "a","i","U","E","O","A","I"];
+    let count = 0;
+    for(let i=0; i<str.length; i++){
+        for(let j=0; j<vowelWord.length;j++){
+            if(str[i] === vowelWord[j]){
+                count++;
+            }
+        }
+    }
+
+    console.log("Chuỗi vừa nhập là:  " +str);
+    console.log("Số lượng phần tử trong mảng: " +str.length);
+    console.log("Số nguyên âm có trong mảng: " +count);
+
+
+</script>
+</body>
+</html>

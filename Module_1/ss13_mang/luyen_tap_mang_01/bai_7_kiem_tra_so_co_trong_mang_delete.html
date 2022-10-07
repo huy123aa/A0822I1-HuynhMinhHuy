@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số có trong mảng, true thì xóa</title>
+</head>
+<body>
+<script>
+    let arr =[];
+    for(let i=0; i<10; i++){
+        let j= i+1;
+        arr[i] = +prompt("Mời nhập phần tử "+ j);
+    }
+    console.log("Mảng vừa nhập là: "+arr);
+    let num = +prompt("Mời nhập 1 số V:  ");
+    for(let k=0; k<10; k++){
+        if(arr[k] == num){
+            arr.splice(k,1);
+            k--;
+            arr.push(0);
+        }
+    }
+    console.log("Mảng sau khi xóa số V: " +arr);
+
+</script>
+</body>
+</html>

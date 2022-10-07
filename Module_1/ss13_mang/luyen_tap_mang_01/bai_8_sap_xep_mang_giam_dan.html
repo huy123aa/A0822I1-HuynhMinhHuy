@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sắp xếp mảng giảm dần</title>
+</head>
+<body>
+<script>
+    let arr =[];
+    for(let i=0; i<10; i++){
+        let j= i+1;
+        arr[i] = +prompt("Mời nhập phần tử "+ j);
+    }
+    console.log("Mảng vừa nhập là: "+arr);
+    for(let i=0; i<9; i++){
+        for(let j=i+1; j<10; j++){
+            if(arr[i] < arr[j]){
+                let temp = arr[i];
+                arr[i]= arr[j];
+                arr[j]= temp;
+            }
+        }
+    }
+    console.log("Mảng sau khi sắp xếp: "+arr);
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    for (let i = 0; i < 10; i++) {
+        numbers.push(Math.floor(Math.random() * 100));
+    }
+    console.log("Mảng ban đầu là: "+numbers);
+
+    for (let i = 0; i < 10; i++) {
+        while(numbers[i] < 10) {
+
+            numbers.splice(i,1,);
+        }
+    }
+    console.log("Mảng lúc sau là: "+numbers);
+
+    console.log("Có "+ numbers.length+" số thỏa mãn.")
+
+</script>
+</body>
+</html>

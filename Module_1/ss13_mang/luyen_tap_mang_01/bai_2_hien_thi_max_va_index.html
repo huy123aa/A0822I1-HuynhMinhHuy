@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    for (let i = 0; i < 10; i++) {
+        numbers.push(Math.floor(Math.random() * 100));
+    }
+    document.write("Mảng ban đầu là: "+numbers);
+    let max = 0;
+    let indexOfMax =0;
+    for(let i=0; i<10; i++){
+        if(numbers[i] > max){
+            max = numbers[i];
+            indexOfMax = i;
+        }
+    }
+    document.write("<br>"+"Phần tử lớn nhất là: "+ max+" có vị trí là "+ indexOfMax);
+</script>
+</body>
+</html>

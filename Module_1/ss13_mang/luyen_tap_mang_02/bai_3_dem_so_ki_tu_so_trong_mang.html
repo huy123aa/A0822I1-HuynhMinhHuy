@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let numOfIndex = +prompt("Nhập số phần từ bạn muốn có trong mảng: ");
+    let arr = [];
+    for (let i = 0; i < numOfIndex; i++) {
+        let j = i + 1;
+        arr[i] = prompt("Nhập phần tử thứ " + j);
+    }
+    document.write("Mảng vừa nhập là: " + arr);
+    let count = 0;
+    let number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    for (let i = 0; i<arr.length; i++){
+        for(let j = 0; j<number.length; j++){
+            if(arr[i] == number[j]){
+                count ++;
+            }
+        }
+    }
+    document.write("<br>"+"Số kí tự số là: "+count);
+</script>
+</body>
+</html>
