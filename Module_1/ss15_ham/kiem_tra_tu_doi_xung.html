@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+    function isPalindrome(str){
+        let arr = str.split("");
+        let temp = arr;
+        for(let i=0; i<=arr.length/2;i++){
+            if(arr[0] != temp[arr.length -1]){
+                return false;
+            }else {
+                temp.shift();
+                temp.pop();
+            }
+        }return true;
+    }
+    let str = prompt("Nhập một từ: ");
+    alert(isPalindrome(str));
+
+    // let str = prompt();
+    // if (isPalidrome(str)) {
+    //     console.log("Yes");
+    // } else {
+    //     console.log("No");
+    // }
+    // function isPalidrome(str) {
+    //     let strToArray = str.split("");
+    //     for (let i = 0; i < strToArray.length; i++) {
+    //         let j = strToArray.length - 1 - i;
+    //         if (i < j) {
+    //             if (strToArray[i] != strToArray[j]) {
+    //                 return false;
+    //             }
+    //         }
+    //     }
+    //     return true;
+    // }
+
+</script>
+</body>
+</html>

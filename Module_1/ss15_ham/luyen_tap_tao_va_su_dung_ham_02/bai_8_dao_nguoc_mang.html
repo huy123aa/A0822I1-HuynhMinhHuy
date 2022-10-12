@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8: Đảo ngược mảng</title>
+</head>
+<body>
+<script>
+    function reverseArr(arr) {
+        arr.reverse();
+        return arr;
+    }
+    let index = +prompt("Nhập số phần tử của mảng");
+    let arr = [];
+    for(let i=0; i<index; i++){
+        let j= i+1;
+        arr[i] = +prompt("Nhập phần tử thứ "+j);
+    }
+    document.write(arr);
+    reverseArr(arr);
+    document.write("<br>"+arr);
+
+</script>
+</body>
+</html>

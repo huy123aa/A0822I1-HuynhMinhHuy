@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng bài 2</title>
+</head>
+<body>
+<script>
+    let num1 = +prompt("Nhập số phần tử trong mảng A: ");
+    let num2 = +prompt("Nhập số phần tử trong mảng B: ");
+    let mangA=[];
+    let mangB=[];
+    let mangC=[];
+    for(let i = 0; i<num1;i++){
+        let j = i+1;
+        mangA[i] = +prompt("Mời nhập phần tử thứ "+j+" của mảng A: ");
+    }
+    document.write("Mảng A là: "+mangA);
+    for(let i = 0; i<num1;i++){
+        let j = i+1;
+        mangB[i] = +prompt("Mời nhập phần tử thứ "+j+" của mảng B: ");
+    }
+    document.write("<br>"+"Mảng B là: "+mangB);
+    let check =0;
+    for(let i =0; i<mangB.length; i++){
+        check =0;
+        for(let j=0;j<mangA.length; j++){
+            if(mangB[i] === mangA[j]){
+                check =1;
+            }
+        }
+        if (check == 0){
+            mangC.push(mangB[i]);
+        }
+    }
+    document.write("<br>"+"Mảng C là: "+mangC);
+
+
+</script>
+</body>
+</html>

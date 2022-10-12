@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    function isPrime(num) {
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return 0;
+            }
+        }
+        return num > 1;
+    }
+    // let num = +prompt("Nhập số: ");
+    // if(isPrime(num) ){
+    //     alert("Yes");
+    // }else {
+    //     alert("No");
+    // }
+    let temp = +prompt("Nhập số lượng muốn in ra")
+    let number = 2;
+    document.write("Các số nguyên tố nhỏ hơn "+temp+" là: "+"<br>");
+    while (number < temp) {
+        if (isPrime(number)) {
+            document.write(number+", ");
+        }
+        number++;
+    }
+</script>
+</body>
+</html>

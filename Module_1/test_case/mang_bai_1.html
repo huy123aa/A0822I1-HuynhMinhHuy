@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng bài 1 </title>
+</head>
+<body>
+<script>
+    let numOfIndex = +prompt("Nhập số phần từ bạn muốn có trong mảng: ");
+    let arrA = [];
+    let arrB = [];
+    for (let i = 0; i < numOfIndex; i++) {
+        let j = i + 1;
+        arrA[i] = +prompt("Nhập phần tử thứ " + j);
+    }
+    document.write("Mảng A là: " + arrA);
+    for(let i = 0; i< numOfIndex; i++){
+        arrB[i] = 0;
+        for(let j = 0; j<= i; j++){
+            arrB[i] += arrA[j];
+
+        }
+    }
+    document.write("<br>"+"Mảng B là: " + arrB);
+</script>
+</body>
+</html>

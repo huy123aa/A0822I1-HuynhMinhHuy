@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4: Kiểm tra kí tự số</title>
+</head>
+<body>
+<script>
+    function checkNum(input) {
+        let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        for(let i=0; i<arr.length; i++){
+            if(input == arr[i]){
+                return true;
+            }
+        }return false;
+    }
+    let input = prompt("Mời nhập 1 kí tự: ");
+    alert(checkNum(input));
+</script>
+</body>
+</html>

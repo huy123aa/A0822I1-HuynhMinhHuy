@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7: Đổi chỗ 2 số</title>
+</head>
+<body>
+<script>
+    function swapTwoNum(num1, num2) {
+        let temp = num1;
+        num1 = num2;
+        num2 = temp;
+        return [num1, num2];
+    }
+    let num1 = +prompt("Nhập số thứ nhất: ");
+    let num2 = +prompt("Nhập số thứ hai: ");
+    document.write(num1 +" , "+num2);
+    [num1, num2] = swapTwoNum(num1, num2);
+    document.write("<br>"+num1 +" , "+num2);
+
+</script>
+</body>
+</html>

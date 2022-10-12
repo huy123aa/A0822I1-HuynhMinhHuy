@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let arrOfStar = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arrOfConstellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+
+    function check(str) {
+        let dem = -1;
+        for (let i = 0; i < arrOfStar.length; i++) {
+            if (arrOfStar[i] === str) {
+                dem = i;
+            }
+        }
+        if (dem == -1) {
+            alert("Không tìm thấy ngôi sao nào")
+        } else {
+            alert(arrOfConstellation[dem]);
+        }
+    }
+
+    let str = prompt("Nhập tên ngôi sao");
+    check(str);
+
+</script>
+</body>
+</html>
