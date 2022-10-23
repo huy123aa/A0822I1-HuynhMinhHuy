@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm</title>
+</head>
+<body>
+<input type="text" id="sanPham" placeholder="Nhập tên sản phẩm">
+<input type="button" value="Thêm sản phẩm" onclick="themMoi()"><br>
+<span>Số lượng sản phẩm: </span><span id="soLuong"></span>
+<div id="hienThi"></div>
+<script>
+    let danhSachSP = ["Nokia", "Iphone", "SamSung"];
+    hienThi(danhSachSP);
+    function themMoi() {
+        let sanPhamMoi = document.getElementById("sanPham").value;
+        if(sanPhamMoi !=""){
+            danhSachSP.push(sanPhamMoi);
+        }else{
+            alert("Mời nhập sản phẩm!!!");
+        }
+        hienThi(danhSachSP);
+        document.getElementById("sanPham").value="";
+    }
+    function xoaSP(index) {
+        let xacNhanXoa = confirm("Bạn có muốn xóa sản phẩm "+danhSachSP[index]+"???");
+        if(xacNhanXoa){
+            danhSachSP.splice(index,1);
+        }
+        hienThi(danhSachSP);
+    }
+    function suaSP(index) {
+        let suaTenSP = prompt("Nhập tên sản phẩm mới", danhSachSP[index]);
+        danhSachSP[index] = suaTenSP;
+        hienThi(danhSachSP);
+    }
+    function hienThi(danhSach) {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Tên sản phẩm</th>\n' +
+            '        <th>Sửa</th>\n' +
+            '        <th>Xóa</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < danhSachSP.length; i++) {
+            tableString += '<tr>\n' +
+                '        <td style="text-align: center">'+(i+1)+'</td>\n' +
+                '        <td>'+danhSachSP[i]+'</td>\n' +
+                '        <td><input type="button" onclick="suaSP('+i+')" value="Sửa"></td>\n' +
+                '        <td><input type="button" onclick="xoaSP('+i+')" value="Xóa"></td>\n' +
+                '    </tr>'
+
+        }
+        tableString +='</table>'
+        document.getElementById("hienThi").innerHTML=tableString;
+        document.getElementById("soLuong").innerHTML=danhSach.length;
+    }
+</script>
+</body>
+</html>

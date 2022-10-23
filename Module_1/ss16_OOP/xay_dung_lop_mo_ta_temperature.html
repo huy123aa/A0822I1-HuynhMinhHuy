@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô ta Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(C) {
+            this.C = C;
+        }
+        getF(){
+            return (C * 1.8 +32);
+        }
+        getK(){
+            return (C+273.15);
+        }
+    }
+    let C = +prompt("Mời nhập giá trị độ C: ");
+    let temper1 = new Temperature(C);
+    document.write("Với độ C = "+C+"<br>");
+    document.write("Chuyển qua độ F: "+ temper1.getF());
+    document.write("<br>"+"Chuyển qua độ K: "+ temper1.getK());
+
+
+</script>
+</body>
+</html>

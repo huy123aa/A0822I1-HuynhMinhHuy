@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam and Eva</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor() {
+            this.weight = 10;
+        }
+        getWeight(){
+            return this.weight;
+        }
+    }
+    class Human{
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        say(text){
+            console.log(text);
+        }
+        eat(apple){
+            if(apple.weight > 0){
+                apple.weight --;
+                this.weight++;
+                console.log("Măm măm,"+this.name+" xin một miếng nhá");
+            }else{
+                console.log("Làm gì còn táo mà ăn?");
+            }
+            console.log(this.weight);
+        }
+        getWeight(){
+            return this.weight;
+        }
+    }
+    let apple1 = new Apple();
+    let adam = new Human("adam", "male", 50);
+    let eva = new Human("eva", "female", 40);
+    for(let i=0; i<11; i++){
+        adam.eat(apple1);
+        eva.eat(apple1);
+    }
+    console.log(apple1.getWeight());
+
+</script>
+</body>
+</html>

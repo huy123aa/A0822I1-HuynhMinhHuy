@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bật tắt bóng đèn</title>
+</head>
+<body>
+<script>
+    class SwitchButton {
+        constructor(status, connect) {
+            this.status = status;
+            this.connect = connect
+        }
+
+        connectToLamp() {
+            if (this.connect == 1) {
+                // console.log("Đã kết nối với bóng đèn");
+                return true;
+            } else {
+                // console.log("Chưa nối dây điện kìa bro");
+                return false;
+            }
+        }
+
+        switchOFF() {
+            this.status = 0;
+            console.log("Đã tắt điện");
+        }
+
+        switchON() {
+            this.status = 1;
+            console.log("Đã bật điện");
+        }
+    }
+
+    class EletricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        eletriclamp(switchButton) {
+            if (switchButton.status == 1 && switchButton.connectToLamp()) {
+                console.log("Đèn bật");
+            } else {
+                console.log("Đèn tắt");
+            }
+        }
+    }
+
+    let switch1 = new SwitchButton(1,0); // số đầu tiên là bật công tắt, số thứ 2 là nối điện tới đèn
+    let electricLamp = new EletricLamp(1);
+    electricLamp.eletriclamp(switch1);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đơn giản-Di chuyển đối tượng</title>
+</head>
+<body>
+<div id="game"></div>
+<script>
+    class Object{
+        constructor(image, top, left, right, size) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.right = right;
+            this.size = size;
+        }
+        getObjElement(){
+            return '<img width="'+ this.size + '"' +
+                ' height="'+ this.size + '"' +
+                ' src="' + this.image +'"' +
+                ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+    }
+        moveRight(){
+            this.left += 20;
+        }
+        moveLeft(){
+            this.left -= 20;
+        }
+    }
+    let obj = new Object('pikachu.png',20,20,20,200);
+    function start(){
+        if(obj.left < window.innerWidth - obj.size){
+            obj.moveRight();
+        }
+        else if(obj.right < window.innerWidth + obj.size){
+            obj.moveLeft();
+        }
+        document.getElementById('game').innerHTML = obj.getObjElement();
+        setTimeout(start, 20)
+    }
+
+    start();
+</script>
+
+</body>
+</html>
