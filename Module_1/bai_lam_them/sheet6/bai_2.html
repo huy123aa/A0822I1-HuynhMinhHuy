@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    function checkTriangle(x, y, z) {
+        if (x < 0 || y < 0 || z < 0) {
+            document.write("Không phải là cạnh tam giác");
+        } else {
+            if (x + y > z && x + z > y && y + z > x) {
+                if (x * x + y * y == z * z || x * x + z * z == y * y || y * y + z * z == x * x) {
+                    document.write("Là 3 cạnh của tam giác vuông");
+                } else document.write("Chỉ là 3 cạnh của một tam giác");
+            }else {
+                document.write("Không phải là cạnh tam giác");
+            }
+        }
+    }
+
+    let x = +prompt("Mời nhập cạnh x: ")
+    let y = +prompt("Mời nhập cạnh y: ")
+    let z = +prompt("Mời nhập cạnh z: ")
+    checkTriangle(x, y, z);
+</script>
+</body>
+</html>

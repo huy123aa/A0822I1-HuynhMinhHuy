@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập lương nhân viên</title>
+</head>
+<body>
+<script>
+    let luongNhanVien = +prompt("Mời nhập lương nhân viên: ");
+    let thue = 0;
+    let luongThuc = 0;
+    if(luongNhanVien > 15000000){
+        thue = luongNhanVien * 20 / 100;
+        luongThuc = luongNhanVien - thue;
+    }else{
+        if(luongNhanVien >= 7000000){
+            thue =luongNhanVien * 10 / 100;
+            luongThuc = luongNhanVien - thue;
+        }else{
+            thue =luongNhanVien * 5 / 100;
+            luongThuc = luongNhanVien - thue;
+        }
+    }
+    document.write("Lương nhân viên: "+luongNhanVien);
+    document.write("<br>"+"Thuế: "+thue);
+    document.write("<br>"+"Lương thực tế: "+luongThuc);
+
+</script>
+</body>
+</html>

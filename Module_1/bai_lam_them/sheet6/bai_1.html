@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Mời nhập độ dài phần tử trong mảng: ");
+    let arr =[];
+    for(let i =0; i< num; i++){
+        let j= i+1;
+        arr[i] = +prompt("Nhập phần tử thứ: "+j);
+    }
+    document.write(arr+"<br>");
+    function checkIncrease(arr) {
+        for(let i =0; i<arr.length-1; i++){
+            if(arr[i] > arr[i+1]){
+                return 0;
+
+            }
+        }return 1;
+    }
+    if(checkIncrease(arr)){
+        document.write("OK");
+    }else document.write("No");
+
+</script>
+</body>
+</html>

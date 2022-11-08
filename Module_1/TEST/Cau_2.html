@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 2</title>
+</head>
+<body>
+<script>
+    function checkString(str) {
+        let arr = str.split("");
+        let temp = arr;
+        for (let i = 0; i <= arr.length / 2; i++) {
+            if (arr[0] != temp[arr.length - 1]) {
+                return false;
+            } else {
+                temp.shift();
+                temp.pop();
+            }
+        }
+        return true;
+    }
+
+    let str = prompt("Nhập một từ: ");
+    if (checkString(str)) {
+        alert("Chuỗi " + str + " là chuỗi đối xứng");
+    } else {
+        alert("Chuỗi " + str + " là chuỗi không đối xứng")
+    }
+</script>
+</body>
+</html>

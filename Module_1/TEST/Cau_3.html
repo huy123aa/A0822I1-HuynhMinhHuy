@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 3</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Mời nhập số phần tử trong mảng: ");
+    let arr = [];
+    for (let i = 0; i < num; i++) {
+        arr[i] = +prompt("Mời nhập số nguyên thứ: " + i);
+    }
+    document.write("Mảng vừa nhập: " + arr + "<br>");
+    document.write(returnArr(arr));
+
+    function checkPrime(number) {
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return number > 1;
+    }
+
+    function returnArr(arr) {
+        let arrResult = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (checkPrime(arr[i])) {
+                arrResult.push(arr[i]);
+            }
+        }
+        for (let i = 0; i < arrResult.length - 1; i++) {
+            for (let j = i + 1; j < arrResult.length; j++) {
+                if (arrResult[i] > arrResult[j]) {
+                    let temp = arrResult[i];
+                    arrResult[i] = arrResult[j];
+                    arrResult[j] = temp;
+                }
+            }
+        }
+        return arrResult;
+    }
+</script>
+</body>
+</html>

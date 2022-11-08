@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng có các phần tử hàng đơn vị lớn hơn hàng chục</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Mời nhập số phần tử trong mảng: ");
+    let arr = [];
+    for(let i=0; i<num; i++){
+        let j= i+1;
+        arr[i] = +prompt("Mời nhập phần tử thứ "+j);
+        //Số nhỏ hơn 10 và lớn hon 100 thì nhập lại
+        while(arr[i]<=10 || arr[i]>=100){
+            alert("Mời nhập lại số lớn hơn 10 và nhỏ hơn 100");
+            arr[i] = +prompt("Mời nhập phần tử thứ "+j);
+        }
+    }
+    document.write(arr);
+    //Khởi tạo mảng mới
+    let arrNew = [];
+    for(let i =0; i< arr.length; i++){
+        //Lấy hàng đơn vị
+        let tempDonVi = arr[i] % 10;
+        //Lấy hàng chục
+        let tempHangChuc = arr[i] / 10;
+        if(tempDonVi > tempHangChuc){
+            arrNew.push(arr[i]);
+        }
+    }
+    document.write("<br>"+arrNew);
+</script>
+</body>
+</html>
