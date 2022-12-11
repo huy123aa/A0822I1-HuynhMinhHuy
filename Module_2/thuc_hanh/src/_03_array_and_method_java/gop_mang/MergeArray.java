@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class MergeArray {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nhập số phần tử cho mảng 1: ");
@@ -35,4 +36,6 @@ public class MergeArray {
 
         System.out.println("Mảng 3: " + Arrays.toString(mang3));
     }
+
+
 }
