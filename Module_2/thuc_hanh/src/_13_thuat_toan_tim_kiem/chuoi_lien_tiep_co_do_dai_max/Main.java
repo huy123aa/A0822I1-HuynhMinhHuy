@@ -27,7 +27,7 @@ public class Main {
         }
 
         for (Character ch : max) {
-            System.out.print(ch); 
+            System.out.print(ch);
         }
         System.out.println();
     }
